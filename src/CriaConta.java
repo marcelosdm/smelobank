@@ -4,7 +4,7 @@
 public class CriaConta {
 
   public static void main(String[] args) {
-    Conta conta = new Conta();
+    Conta conta = new Conta(2322, 112233);
     Cliente cliente = new Cliente();
     conta.setTitular(cliente);
     conta.deposita(1000.00);
@@ -16,6 +16,8 @@ public class CriaConta {
     conta.deposita(valorDeposito);
 
     System.out.println("Valor conta: R$" + conta.getSaldo());
+
+    Conta conta2 = new Conta(0304, 990099);
 
   }
 }
