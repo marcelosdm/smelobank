@@ -7,6 +7,10 @@ public class Cliente {
   private String cpf;
   private String profissao;
 
+  public Cliente(String nome) {
+    System.out.println("Seja bem-vindo(a) " + nome);
+  }
+
   public String getNome() {
     return this.nome;
   }

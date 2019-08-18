@@ -10,12 +10,12 @@ public class Conta {
   private static int total = 0;
 
   public Conta(int agencia, int numero) {
-    System.out.println("Criando uma conta");
+    Conta.total++;
+    System.out.println("Criando a conta " + numero);
+    System.out.println("O total de contas é: " + Conta.total);
     this.agencia = agencia;
     this.numero = numero;
     this.saldo = 100;
-    total++;
-    System.out.println("O total de contas é: " + Conta.total);
   }
 
   public double deposita(double valor) {
@@ -49,6 +49,10 @@ public class Conta {
   }
 
   public void setNumero(int numero) {
+    if (numero <= 0) {
+      System.out.println("O número da conta não pode ser número negativo ou zero.");
+      return;
+    }
     this.numero = numero;
   }
 
@@ -57,6 +61,10 @@ public class Conta {
   }
 
   public void setAgencia(int agencia) {
+    if (agencia <= 0) {
+      System.out.println("O número da agência não pode ser negativo ou zero.");
+      return;
+    }
     this.agencia = agencia;
   }
 
