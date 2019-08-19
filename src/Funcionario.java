@@ -4,10 +4,6 @@ public class Funcionario {
   private String cpf;
   private double salario;
 
-  public Funcionario(String nome) {
-    System.out.println("Bem vindo(a) " + nome);
-  }
-
   public double getBonificacao() {
     return this.salario * 0.1;
   }

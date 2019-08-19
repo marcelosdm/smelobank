@@ -1,8 +1,4 @@
 public class Gerente extends Funcionario {
-  public Gerente(String nome) {
-    super(nome);
-    // TODO Auto-generated constructor stub
-  }
 
   private int senha;
 
@@ -15,5 +11,9 @@ public class Gerente extends Funcionario {
       return true;
     }
     return false;
+  }
+
+  public double getBonificacao() {
+    return super.getBonificacao() + super.getSalario();
   }
 }
