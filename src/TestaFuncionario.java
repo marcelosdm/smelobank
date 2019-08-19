@@ -1,6 +1,6 @@
 public class TestaFuncionario {
   public static void main(String[] args) {
-    Funcionario d1 = new Funcionario("Marcelo");
+    Funcionario d1 = new Funcionario();
 
     d1.setNome("Marcelo Melo");
     d1.setCpf("34939292923");
