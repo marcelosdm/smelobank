@@ -5,7 +5,7 @@ public class CriaConta {
 
   public static void main(String[] args) {
     Conta conta = new ContaCorrente(2322, 112233);
-    Cliente cliente = new Cliente("Marcelo");
+    Cliente cliente = new Cliente();
     conta.setTitular(cliente);
     conta.deposita(1000.00);
 

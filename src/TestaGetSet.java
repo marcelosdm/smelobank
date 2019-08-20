@@ -8,11 +8,9 @@ public class TestaGetSet {
     conta1.setNumero(2322);
     System.out.println(conta1.getNumero());
 
-    Cliente marcelo = new Cliente("Marcelo Melo");
-    // marcelo.setNome("Marcelo Melo");
+    Cliente marcelo = new Cliente();
 
     conta1.setTitular(marcelo);
 
-    conta1.getTitular().setProfissao("desenvolvedor");
   }
 }
