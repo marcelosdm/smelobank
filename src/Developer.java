@@ -3,7 +3,11 @@
  */
 public class Developer extends Funcionario {
 
-  public double bonificacao() {
-    return super.getBonificacao() + 200;
+  // public double bonificacao() {
+  // return super.getBonificacao() + 200;
+  // }
+
+  public double getBonificacao() {
+    return getSalario() * 0.2;
   }
 }

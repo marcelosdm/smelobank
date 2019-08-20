@@ -1,6 +1,6 @@
 public class TestaFuncionario {
   public static void main(String[] args) {
-    Funcionario d1 = new Funcionario();
+    Funcionario d1 = new Developer();
 
     d1.setNome("Marcelo Melo");
     d1.setCpf("34939292923");
@@ -9,6 +9,7 @@ public class TestaFuncionario {
     System.out.println(d1.getNome());
     System.out.println(d1.getCpf());
     System.out.println(d1.getSalario());
+    System.out.println(d1.getBonificacao());
 
   }
 }
