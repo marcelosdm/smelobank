@@ -20,21 +20,16 @@ public abstract class Conta {
 
   public abstract double deposita(double valor);
 
-  public boolean saca(double valor) {
-    if (this.saldo >= valor) {
-      this.saldo -= valor;
-      return true;
+  public void saca(double valor) throws SaldoInsuficienteException {
+    if (this.saldo < valor) {
+      throw new SaldoInsuficienteException("Saldo: " + this.saldo + " Valor a ser sacado: " + valor);
     }
-    return false;
+    this.saldo -= valor;
   }
 
-  public boolean transfere(double valor, Conta destino) {
-    if (this.saldo >= valor) {
-      this.saldo -= valor;
-      destino.deposita(valor);
-      return true;
-    }
-    return false;
+  public void transfere(double valor, Conta destino) throws SaldoInsuficienteException {
+    this.saca(valor);
+    destino.deposita(valor);
   }
 
   public double getSaldo() {
@@ -46,9 +41,11 @@ public abstract class Conta {
   }
 
   public void setNumero(int numero) {
-    if (numero <= 0) {
-      System.out.println("O número da conta não pode ser número negativo ou zero.");
-      return;
+    if (numero < 1) {
+      throw new IllegalArgumentException("Número de conta inválido");
+      // System.out.println("O número da conta não pode ser número negativo ou
+      // zero.");
+      // return;
     }
     this.numero = numero;
   }
@@ -58,9 +55,10 @@ public abstract class Conta {
   }
 
   public void setAgencia(int agencia) {
-    if (agencia <= 0) {
-      System.out.println("O número da agência não pode ser negativo ou zero.");
-      return;
+    if (agencia < 1) {
+      throw new IllegalArgumentException("Número de agência inválido");
+      // System.out.println("O número da agência não pode ser negativo ou zero.");
+      // return;
     }
     this.agencia = agencia;
   }
