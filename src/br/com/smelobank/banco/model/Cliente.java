@@ -1,11 +1,16 @@
+package br.com.smelobank.banco.model;
+
 /**
- * Administrador
+ * Classe que representa um cliente no Smelobank
+ * 
+ * @author Marcelo Melo
+ * @version 0.1
  */
-public class Administrador extends Funcionario implements Autenticavel {
+public class Cliente implements Autenticavel {
 
   private AutenticaUtil autenticador;
 
-  public Administrador() {
+  public Cliente() {
     this.autenticador = new AutenticaUtil();
   }
 
@@ -17,10 +22,5 @@ public class Administrador extends Funcionario implements Autenticavel {
   @Override
   public boolean autentica(int senha) {
     return this.autenticador.autentica(senha);
-  }
-
-  @Override
-  public double getBonificacao() {
-    return getSalario() * 0.2;
   }
 }

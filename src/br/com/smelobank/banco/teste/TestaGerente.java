@@ -1,3 +1,7 @@
+package br.com.smelobank.banco.teste;
+
+import br.com.smelobank.banco.model.Gerente;
+
 public class TestaGerente {
   public static void main(String[] args) {
     Gerente g1 = new Gerente();

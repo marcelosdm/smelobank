@@ -1,3 +1,9 @@
+package br.com.smelobank.banco.teste;
+
+import br.com.smelobank.banco.model.ContaCorrente;
+import br.com.smelobank.banco.model.ContaPoupanca;
+import br.com.smelobank.banco.model.SaldoInsuficienteException;
+
 /**
  * TestaContas
  */

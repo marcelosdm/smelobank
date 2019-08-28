@@ -1,8 +1,14 @@
-public class Gerente extends Funcionario implements Autenticavel {
+package br.com.smelobank.banco.model;
+
+/**
+ * Administrador
+ */
+
+public class Administrador extends Funcionario implements Autenticavel {
 
   private AutenticaUtil autenticador;
 
-  public Gerente() {
+  public Administrador() {
     this.autenticador = new AutenticaUtil();
   }
 
@@ -18,6 +24,6 @@ public class Gerente extends Funcionario implements Autenticavel {
 
   @Override
   public double getBonificacao() {
-    return getSalario() * 0.05;
+    return getSalario() * 0.2;
   }
 }

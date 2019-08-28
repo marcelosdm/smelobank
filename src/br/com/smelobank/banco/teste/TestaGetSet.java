@@ -1,3 +1,9 @@
+package br.com.smelobank.banco.teste;
+
+import br.com.smelobank.banco.model.Cliente;
+import br.com.smelobank.banco.model.Conta;
+import br.com.smelobank.banco.model.ContaPoupanca;
+
 /**
  * TestaGetSet
  */

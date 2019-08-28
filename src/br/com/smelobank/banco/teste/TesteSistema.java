@@ -1,3 +1,5 @@
+package br.com.smelobank.banco.teste;
+
 /**
  * TesteSistema
  */

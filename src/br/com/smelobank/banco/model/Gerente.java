@@ -1,11 +1,10 @@
-/**
- * Cliente
- */
-public class Cliente implements Autenticavel {
+package br.com.smelobank.banco.model;
+
+public class Gerente extends Funcionario implements Autenticavel {
 
   private AutenticaUtil autenticador;
 
-  public Cliente() {
+  public Gerente() {
     this.autenticador = new AutenticaUtil();
   }
 
@@ -17,5 +16,10 @@ public class Cliente implements Autenticavel {
   @Override
   public boolean autentica(int senha) {
     return this.autenticador.autentica(senha);
+  }
+
+  @Override
+  public double getBonificacao() {
+    return getSalario() * 0.05;
   }
 }

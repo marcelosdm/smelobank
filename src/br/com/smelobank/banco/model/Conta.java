@@ -1,7 +1,20 @@
+package br.com.smelobank.banco.model;
+
 /**
- * Conta
+ * Classe que representa uma conta no Smelobank
+ * 
+ * @author Marcelo Melo
+ * @version 0.1
  */
 public abstract class Conta {
+
+  /**
+   * Construtor para inicializar o objeto Conta a partir da agência e número da
+   * conta
+   * 
+   * @param agencia
+   * @param numero
+   */
 
   protected double saldo;
   private int agencia;
@@ -20,6 +33,12 @@ public abstract class Conta {
 
   public abstract double deposita(double valor);
 
+  /**
+   * Valor precisa ser menor ou igual ao saldo
+   * 
+   * @param valor
+   * @throws SaldoInsuficienteException
+   */
   public void saca(double valor) throws SaldoInsuficienteException {
     if (this.saldo < valor) {
       throw new SaldoInsuficienteException("Saldo: " + this.saldo + " Valor a ser sacado: " + valor);
@@ -73,5 +92,10 @@ public abstract class Conta {
 
   public static int getTotal() {
     return Conta.total;
+  }
+
+  @Override
+  public String toString() {
+    return "Número : " + this.numero + ", Agência: " + this.agencia;
   }
 }

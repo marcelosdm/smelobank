@@ -1,3 +1,9 @@
+package br.com.smelobank.banco.teste;
+
+import br.com.smelobank.banco.model.CalculadorImposto;
+import br.com.smelobank.banco.model.ContaCorrente;
+import br.com.smelobank.banco.model.SeguroVida;
+
 /**
  * TestaTributos
  */

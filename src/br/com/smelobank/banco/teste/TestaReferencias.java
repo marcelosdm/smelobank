@@ -1,3 +1,10 @@
+package br.com.smelobank.banco.teste;
+
+import br.com.smelobank.banco.model.ControleBonificacao;
+import br.com.smelobank.banco.model.Developer;
+import br.com.smelobank.banco.model.Gerente;
+import br.com.smelobank.banco.model.Support;
+
 /**
  * TestaReferencias
  */

@@ -1,3 +1,8 @@
+package br.com.smelobank.banco.teste;
+
+import br.com.smelobank.banco.model.Developer;
+import br.com.smelobank.banco.model.Funcionario;
+
 public class TestaFuncionario {
   public static void main(String[] args) {
     Funcionario d1 = new Developer();
